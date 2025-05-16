@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Game</title>
+  <link rel="icon" type="image/png" href="lhfblanc.jpg">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div id="start-screen" class="screen active">
+      <h1>Welcome to the Infinite Quiz!</h1>
+      <p>Test your knowledge across all domains!</p>
+      <button id="start-btn">Start Quiz</button>
+    </div>
+    <div id="quiz-screen" class="screen">
+      <h2>Question <span id="current-question"></span> of <span id="total-questions"></span></h2>
+      <div class="progress-container">
+        <div id="progress" class="progress-bar"></div>
+      </div>
+      <p>Current Set Score: <span id="score"></span></p>
+      <p>Total Score: <span id="total-score"></span></p>
+      <p id="question-text"></p>
+      <div id="answers-container"></div>
+    </div>
+    <div id="result-screen" class="screen">
+      <h2>Quiz Set Completed!</h2>
+      <p>Set Score: <span id="final-score"></span> out of <span id="max-score"></span></p>
+      <p>Total Score: <span id="total-score-result"></span></p>
+      <p id="result-message"></p>
+      <button id="continue-btn">Continue to Next Set</button>
+      <button id="restart-btn">Restart Quiz</button>
+      <button id="quit-btn">Quit</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

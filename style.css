@@ -1,0 +1,186 @@
+/* Global styles for a professional look */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #e8ecef 0%, #f7f9fc 100%);
+  background-size: cover; /* Assure-toi que l'image couvre tout l'écran */
+  background-position: center; /* Centre l'image de fond */
+  color: #333;
+}
+
+/* Container with a modern card-like appearance */
+.container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.75); /* glassmorphism effect */
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  max-width: 600px;
+  width: 90%;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Screen transitions */
+.screen {
+  display: none;
+}
+
+.screen.active {
+  display: block;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Fade-in animation for screens */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Typography */
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a2b49;
+  margin-bottom: 1rem;
+}
+
+h1:hover {
+  color: #2b6cb0;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  cursor: default;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a2b49;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1rem;
+  color: #4a5568;
+  margin: 0.5rem 0;
+}
+
+/* Buttons with a professional and interactive style */
+button, .answer-btn {
+  display: inline-block;
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  background: #2b6cb0;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover, .answer-btn:hover {
+  background: #1a4971;
+  transform: translateY(-2px);
+}
+
+button:active, .answer-btn:active {
+  transform: translateY(0);
+}
+
+/* Specific button styles */
+#start-btn, #continue-btn {
+  background: #3182ce;
+}
+
+#start-btn:hover, #continue-btn:hover {
+  background: #2b6cb0;
+}
+
+#restart-btn {
+  background: #38a169;
+}
+
+#restart-btn:hover {
+  background: #2f855a;
+}
+
+#quit-btn {
+  background: #e53e3e;
+}
+
+#quit-btn:hover {
+  background: #c53030;
+}
+
+/* Answer button states */
+.answer-btn.correct {
+  background: #38a169;
+}
+
+.answer-btn.incorrect {
+  background: #e53e3e;
+}
+
+/* Progress bar with a sleek design */
+.progress-container {
+  width: 100%;
+  background: #edf2f7;
+  border-radius: 8px;
+  margin: 1rem 0;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #3182ce;
+  width: 0;
+  border-radius: 8px;
+  transition: width 0.4s ease;
+}
+
+/* Footer for signature */
+footer {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #999;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .container {
+    padding: 1.5rem;
+    width: 95%;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  button, .answer-btn {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Accessibility improvements */
+button:focus, .answer-btn:focus {
+  outline: 2px solid #3182ce;
+  outline-offset: 2px;
+}
